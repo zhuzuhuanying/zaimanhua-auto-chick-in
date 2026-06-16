@@ -8,6 +8,7 @@
 
 | 功能 | 对应工作流 | 说明 |
 |-----|-----------|------|
+| 每日综合任务 | Zaimanhua Daily Tasks | 一次完成 签到+评论+阅读 |
 | 每日签到 | Zaimanhua Auto Check-in | 自动完成签到任务 |
 | 每日评论 | Daily Comment plus | 在随机漫画下发表评论 |
 | 每日阅读 | Daily Watch | 自动阅读漫画 |
@@ -42,6 +43,7 @@
 | `ZAIMANHUA_USERNAME_5` | 账号5用户名/手机号 | `ZAIMANHUA_PASSWORD_5` | 账号5密码 |
 
 > 支持的工作流：
+> - Zaimanhua Daily Tasks
 > - Zaimanhua Auto Check-in
 > - Daily Comment plus
 > - Daily Watch

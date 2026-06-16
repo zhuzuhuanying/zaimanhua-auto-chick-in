@@ -1,0 +1,49 @@
+name: Zaimanhua Daily Tasks
+
+on:
+  schedule:
+    # 北京时间 8:00 (UTC+8)，即 UTC 0:00
+    - cron: '0 0 * * *'
+  workflow_dispatch:       # 支持手动触发
+
+jobs:
+  daily-tasks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120   # 支持最多5账号 (阅读~30分钟/账号 + 缓冲)
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+
+      - name: Run daily tasks script
+        env:
+          PYTHONIOENCODING: utf-8
+          ZAIMANHUA_COOKIE: ${{ secrets.ZAIMANHUA_COOKIE }}
+          ZAIMANHUA_COOKIE_1: ${{ secrets.ZAIMANHUA_COOKIE_1 }}
+          ZAIMANHUA_COOKIE_2: ${{ secrets.ZAIMANHUA_COOKIE_2 }}
+          ZAIMANHUA_COOKIE_3: ${{ secrets.ZAIMANHUA_COOKIE_3 }}
+          ZAIMANHUA_COOKIE_4: ${{ secrets.ZAIMANHUA_COOKIE_4 }}
+          ZAIMANHUA_COOKIE_5: ${{ secrets.ZAIMANHUA_COOKIE_5 }}
+          ZAIMANHUA_USERNAME: ${{ secrets.ZAIMANHUA_USERNAME }}
+          ZAIMANHUA_PASSWORD: ${{ secrets.ZAIMANHUA_PASSWORD }}
+          ZAIMANHUA_USERNAME_1: ${{ secrets.ZAIMANHUA_USERNAME_1 }}
+          ZAIMANHUA_PASSWORD_1: ${{ secrets.ZAIMANHUA_PASSWORD_1 }}
+          ZAIMANHUA_USERNAME_2: ${{ secrets.ZAIMANHUA_USERNAME_2 }}
+          ZAIMANHUA_PASSWORD_2: ${{ secrets.ZAIMANHUA_PASSWORD_2 }}
+          ZAIMANHUA_USERNAME_3: ${{ secrets.ZAIMANHUA_USERNAME_3 }}
+          ZAIMANHUA_PASSWORD_3: ${{ secrets.ZAIMANHUA_PASSWORD_3 }}
+          ZAIMANHUA_USERNAME_4: ${{ secrets.ZAIMANHUA_USERNAME_4 }}
+          ZAIMANHUA_PASSWORD_4: ${{ secrets.ZAIMANHUA_PASSWORD_4 }}
+          ZAIMANHUA_USERNAME_5: ${{ secrets.ZAIMANHUA_USERNAME_5 }}
+          ZAIMANHUA_PASSWORD_5: ${{ secrets.ZAIMANHUA_PASSWORD_5 }}
+        run: python src/daily_task.py
