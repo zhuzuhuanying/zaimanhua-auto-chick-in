@@ -20,16 +20,13 @@
 
 ### 当前活动
 
-| 功能 | 对应工作流 | 说明 |
-|-----|-----------|------|
-| 端午节抽奖 | Boat Festival Lottery Activity | 完成任务并自动抽奖 |
-
-> **活动日期：2026.06.19 - 2026.06.21**
+> 暂无进行中的活动
 
 ### 已结束活动
 
 | 功能 | 对应工作流 | 说明 |
 |-----|-----------|------|
+| 端午节抽奖 | Boat Festival Lottery Activity | 完成任务并自动抽奖 |
 | 原创征稿季 | Yuanchuang Activity | 完成任务并自动抽奖 |
 | 每日抽奖 | Daily Lottery | 完成任务并自动抽奖 |
 | 51抽奖活动 | 51 Lottery Activity | 完成任务并自动抽奖 |
@@ -44,7 +41,7 @@
 2. 进入 **Settings** → **Secrets and variables** → **Actions**
 3. 选择以下任一方式添加 Secret：
 
-### 方式一：账号密码（推荐，自动登录）
+### 方式一：账号密码（推荐）
 
 | 用户名 Secret | 说明 | 密码 Secret | 说明 |
 |---------------|------|-------------|------|
@@ -60,8 +57,6 @@
 > - Zaimanhua Auto Check-in
 > - Daily Comment plus
 > - Daily Watch
-> - ~~Yuanchuang Activity~~
-> - ~~51 Lottery Activity~~
 
 ### 方式二：手动配置 Cookie
 

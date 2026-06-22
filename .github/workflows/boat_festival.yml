@@ -1,9 +1,6 @@
 name: Boat Festival Lottery Activity
 
 on:
-  schedule:
-    # 北京时间 14:00 (UTC 06:00)
-    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
